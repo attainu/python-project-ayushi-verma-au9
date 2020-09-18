@@ -29,9 +29,9 @@ class ParkingLot:
                            minutes=start.minute, seconds=start.second)
             t2 = timedelta(
                 hours=end.hour, minutes=end.minute, seconds=end.second)
-            time_parked = t2 - t1
-            minutes = (time_parked.seconds // 60) % 60
-            hours = time_parked.seconds//3600
+            time_duration = t2 - t1
+            minutes = (time_duration.seconds // 60) % 60
+            hours = time_duration.seconds//3600
             self.my_lot[slot] = []
             self.total_cark_parked -= 1
             print("Slot number", slot, "is free")
